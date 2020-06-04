@@ -1,24 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Discogs from './discogs.js';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header className="App-body">
+        <div class="discogs-wrapper">
+          <h1>This is My Record Collection</h1>
+        <br></br><br></br>
+          <Discogs />
+          <br></br>
+        <a href="https://api.discogs.com/users/dmpduo/collection/folders/0/releases?per_page=100&token=zZNDlnijlMatqOjTvbJutCDSSgNvfqzunXTuBoLO&page=2">2</a>
+        </div>
       </header>
+
     </div>
   );
 }
