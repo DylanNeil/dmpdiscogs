@@ -19,7 +19,7 @@ constructor(props) {
   // We're using axios instead of Fetch
   axios
     // The API we're requesting data from
-    .get("https://api.discogs.com//users/dmpduo/collection/folders/0/releases?per_page=100&token=zZNDlnijlMatqOjTvbJutCDSSgNvfqzunXTuBoLO")
+    .get("https://api.discogs.com//users/dmpduo/collection/folders/0/releases?per_page=300&token=zZNDlnijlMatqOjTvbJutCDSSgNvfqzunXTuBoLO")
     // Once we get a response, we'll map the API endpoints to our props
     .then(response =>
       response.data.releases.map(record => ({
@@ -65,7 +65,7 @@ render() {
                   <div key={record_id}>
                     <a href ={`https://www.discogs.com/user/dmpduo/collection?search=${artist} ${title}`} target='_blank'>
                       <div class="album">
-                        <img src={cover}/>
+                        <img loading="lazy" src={cover}/>
                         <div class="album-inner">
                           <h2 class="artist"><b>{artist}</b></h2>
                           <h3 class="large album-name">{title}, <i>{year}</i></h3>
