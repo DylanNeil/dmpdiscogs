@@ -63,7 +63,7 @@ render() {
 
                 <Col sm={6} lg={3} md={4} xs={12}>
                   <div key={record_id}>
-                    <a href ={`https://www.discogs.com/user/dmpduo/collection?search=${artist} ${title}`} target='_blank'>
+                    <a href ={`https://www.discogs.com/search/?q=${artist} ${title}&type=all`} target='_blank'>
                       <div class="album">
                         <img loading="lazy" src={cover}/>
                         <div class="album-inner">
@@ -75,13 +75,6 @@ render() {
                       </div>
                     </a>
 
-
-
-                    {/* <div class="content">
-                        <h3 class="large"><b>{artist}</b></h3>
-                        <p class="large album-name">{title}, <i>{year}</i></p>
-                        <p><b>{genre}</b>  - <i>{style}</i></p>
-                    </div> */}
 
                   </div>
 
