@@ -11,7 +11,6 @@ function App() {
         <br></br><br></br>
           <Discogs />
           <br></br>
-        <a href="https://api.discogs.com/users/dmpduo/collection/folders/0/releases?per_page=100&token=zZNDlnijlMatqOjTvbJutCDSSgNvfqzunXTuBoLO&page=2">2</a>
         </div>
       </header>
 
