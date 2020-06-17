@@ -8,12 +8,16 @@ class Discogs extends React.Component {
 
 constructor(props) {
   super(props)
+  this.all = this.all.bind(this);
+  this.rock = this.rock.bind(this);
   this.state = {
     records: [],
     isLoading: true,
     errors: null
   };
 }
+
+
 
   getRecords() {
   // We're using axios instead of Fetch
