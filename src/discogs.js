@@ -22,6 +22,26 @@ folderIndie = () => {
   this.getRecords);
 }
 
+folderChristmas = () => {
+  this.setState({folder: 2180872},
+  this.getRecords);
+}
+
+folderClassicRock = () => {
+  this.setState({folder: 2180863},
+  this.getRecords);
+}
+
+folderClassical = () => {
+  this.setState({folder: 2180864},
+  this.getRecords);
+}
+
+folderCountry = () => {
+  this.setState({folder: 2180864},
+  this.getRecords);
+}
+
   getRecords() {
   // We're using axios instead of Fetch
   axios
@@ -60,6 +80,10 @@ render() {
   const { isLoading, records } = this.state;
   return (
     <React.Fragment>
+    <button onClick = {this.folderIndie}>Indie</button>
+    <button onClick = {this.folderIndie}>Indie</button>
+    <button onClick = {this.folderIndie}>Indie</button>
+    <button onClick = {this.folderIndie}>Indie</button>
     <button onClick = {this.folderIndie}>Indie</button>
       <Container>
         <Row>
