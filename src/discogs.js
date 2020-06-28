@@ -8,22 +8,25 @@ class Discogs extends React.Component {
 
 constructor(props) {
   super(props)
-  this.all = this.all.bind(this);
-  this.rock = this.rock.bind(this);
   this.state = {
     records: [],
     isLoading: true,
-    errors: null
+    errors: null,
+    folder: 0
   };
 }
 
 
+folderIndie = () => {
+  this.setState({folder: 2180865},
+  this.getRecords);
+}
 
   getRecords() {
   // We're using axios instead of Fetch
   axios
     // The API we're requesting data from
-    .get("https://api.discogs.com//users/dmpduo/collection/folders/0/releases?per_page=300&token=zZNDlnijlMatqOjTvbJutCDSSgNvfqzunXTuBoLO")
+    .get("https://api.discogs.com//users/dmpduo/collection/folders/" + this.state.folder + "/releases?per_page=300&token=zZNDlnijlMatqOjTvbJutCDSSgNvfqzunXTuBoLO")
     // Once we get a response, we'll map the API endpoints to our props
     .then(response =>
       response.data.releases.map(record => ({
@@ -48,6 +51,7 @@ constructor(props) {
     .catch(error => this.setState({ error, isLoading: false }));
 }
 
+
 componentDidMount() {
   this.getRecords();
 }
@@ -56,10 +60,9 @@ render() {
   const { isLoading, records } = this.state;
   return (
     <React.Fragment>
+    <button onClick = {this.folderIndie}>Indie</button>
       <Container>
         <Row>
-
-
           {!isLoading ? (
             records.map(record => {
               const { record_id, title, genre, style, year, url, artist, cover} = record;
@@ -74,20 +77,13 @@ render() {
                           <h2 class="artist"><b>{artist}</b></h2>
                           <h3 class="large album-name">{title}, <i>{year}</i></h3>
                           <h4 class="genre"><b>{genre}</b>  - <i>{style}</i></h4>
-
                         </div>
                       </div>
                     </a>
-
-
                   </div>
-
                 </Col>
-
               );
             })
-
-
           ) : (
             <p class="loading">Loading...</p>
           )}
