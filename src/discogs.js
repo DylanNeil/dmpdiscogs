@@ -42,6 +42,46 @@ folderCountry = () => {
   this.getRecords);
 }
 
+folderJazz = () => {
+  this.setState({folder: 2167562},
+  this.getRecords);
+}
+
+folderSoul = () => {
+  this.setState({folder: 2180869},
+  this.getRecords);
+}
+
+folderKitsch = () => {
+  this.setState({folder: 2180877},
+  this.getRecords);
+}
+
+folderMoog = () => {
+  this.setState({folder: 2180870},
+  this.getRecords);
+}
+
+folderPop = () => {
+  this.setState({folder: 2180866},
+  this.getRecords);
+}
+
+folderSoundtrack = () => {
+  this.setState({folder: 2180882},
+  this.getRecords);
+}
+
+folderWeird = () => {
+  this.setState({folder: 2180875},
+  this.getRecords);
+}
+
+folderAll = () => {
+  this.setState({folder: 0},
+  this.getRecords);
+}
+
   getRecords() {
   // We're using axios instead of Fetch
   axios
@@ -80,11 +120,21 @@ render() {
   const { isLoading, records } = this.state;
   return (
     <React.Fragment>
+    <button onClick = {this.folderAll}>All</button>
     <button onClick = {this.folderIndie}>Indie</button>
-    <button onClick = {this.folderIndie}>Indie</button>
-    <button onClick = {this.folderIndie}>Indie</button>
-    <button onClick = {this.folderIndie}>Indie</button>
-    <button onClick = {this.folderIndie}>Indie</button>
+    <button onClick = {this.folderChristmas}>Christmas</button>
+    <button onClick = {this.folderClassicRock}>Classic Rock</button>
+    <button onClick = {this.folderClassical}>Classical</button>
+    <button onClick = {this.folderCountry}>Country</button>
+    <button onClick = {this.folderJazz}>Jazz</button>
+    <button onClick = {this.folderJazz}>Soul/R&B</button>
+    <button onClick = {this.folderKitsch}><i class="far fa-grin-wink"></i></button>
+    <button onClick = {this.folderMoog}>Moog</button>
+    <button onClick = {this.folderPop}>Pop</button>
+    <button onClick = {this.folderSoundtrack}>Pop</button>
+    <button onClick = {this.folderWeird}>Weird</button>
+
+
       <Container>
         <Row>
           {!isLoading ? (
@@ -100,7 +150,8 @@ render() {
                         <div class="album-inner">
                           <h2 class="artist"><b>{artist}</b></h2>
                           <h3 class="large album-name">{title}, <i>{year}</i></h3>
-                          <h4 class="genre"><b>{genre}</b>  - <i>{style}</i></h4>
+                          <h4 class="genre"><b>{genre}</b></h4>
+                          <i>{style}</i>
                         </div>
                       </div>
                     </a>
