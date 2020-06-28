@@ -38,7 +38,7 @@ folderClassical = () => {
 }
 
 folderCountry = () => {
-  this.setState({folder: 2180864},
+  this.setState({folder: 2180880},
   this.getRecords);
 }
 
@@ -86,7 +86,7 @@ folderAll = () => {
   // We're using axios instead of Fetch
   axios
     // The API we're requesting data from
-    .get("https://api.discogs.com//users/dmpduo/collection/folders/" + this.state.folder + "/releases?per_page=300&token=zZNDlnijlMatqOjTvbJutCDSSgNvfqzunXTuBoLO")
+    .get("https://api.discogs.com//users/dmpduo/collection/folders/" + this.state.folder + "/releases?per_page=25&token=zZNDlnijlMatqOjTvbJutCDSSgNvfqzunXTuBoLO")
     // Once we get a response, we'll map the API endpoints to our props
     .then(response =>
       response.data.releases.map(record => ({
@@ -127,11 +127,11 @@ render() {
     <button onClick = {this.folderClassical}>Classical</button>
     <button onClick = {this.folderCountry}>Country</button>
     <button onClick = {this.folderJazz}>Jazz</button>
-    <button onClick = {this.folderJazz}>Soul/R&B</button>
-    <button onClick = {this.folderKitsch}><i class="far fa-grin-wink"></i></button>
+    <button onClick = {this.folderSoul}>Soul/R&B</button>
+    <button onClick = {this.folderKitsch}>Kitsch</button>
     <button onClick = {this.folderMoog}>Moog</button>
     <button onClick = {this.folderPop}>Pop</button>
-    <button onClick = {this.folderSoundtrack}>Pop</button>
+    <button onClick = {this.folderSoundtrack}>Soundtrack</button>
     <button onClick = {this.folderWeird}>Weird</button>
 
 
