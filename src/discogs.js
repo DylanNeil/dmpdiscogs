@@ -3,6 +3,7 @@ import axios from 'axios';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Button from './button.js';
 
 class Discogs extends React.Component {
 
@@ -82,6 +83,7 @@ folderAll = () => {
   this.getRecords);
 }
 
+
   getRecords() {
   // We're using axios instead of Fetch
   axios
@@ -116,24 +118,27 @@ componentDidMount() {
   this.getRecords();
 }
 
+
+
 render() {
   const { isLoading, records } = this.state;
   return (
     <React.Fragment>
-    <button onClick = {this.folderAll}>All</button>
-    <button onClick = {this.folderIndie}>Indie</button>
-    <button onClick = {this.folderChristmas}>Christmas</button>
-    <button onClick = {this.folderClassicRock}>Classic Rock</button>
-    <button onClick = {this.folderClassical}>Classical</button>
-    <button onClick = {this.folderCountry}>Country</button>
-    <button onClick = {this.folderJazz}>Jazz</button>
-    <button onClick = {this.folderSoul}>Soul/R&B</button>
-    <button onClick = {this.folderKitsch}>Kitsch</button>
-    <button onClick = {this.folderMoog}>Moog</button>
-    <button onClick = {this.folderPop}>Pop</button>
-    <button onClick = {this.folderSoundtrack}>Soundtrack</button>
-    <button onClick = {this.folderWeird}>Weird</button>
+    // <span onClick = {this.folderAll}>All</span>
+    // <span onClick = {this.folderIndie}><i class="fas fa-glasses"></i></span>
+    // <span onClick = {this.folderChristmas}><i class="fas fa-candy-cane"></i></span>
+    // <span onClick = {this.folderClassicRock}><i class="fas fa-guitar"></i></span>
+    // <span onClick = {this.folderClassical}>Classical</span>
+    // <span onClick = {this.folderCountry}><i class="fas fa-hat-cowboy-side"></i></span>
+    // <span onClick = {this.folderJazz}>Jazz</span>
+    // <span onClick = {this.folderSoul}>Soul/R&B</span>
+    // <span onClick = {this.folderKitsch}>Kitsch</span>
+    // <span onClick = {this.folderMoog}>Moog</span>
+    // <span onClick = {this.folderPop}>Pop</span>
+    // <span onClick = {this.folderSoundtrack}>Soundtrack</span>
+    // <span onClick = {this.folderWeird}>Weird</span>
 
+<Button>Click Me</Button>
 
       <Container>
         <Row>
@@ -151,7 +156,7 @@ render() {
                           <h2 class="artist"><b>{artist}</b></h2>
                           <h3 class="large album-name">{title}, <i>{year}</i></h3>
                           <h4 class="genre"><b>{genre}</b></h4>
-                          <i>{style}</i>
+                          <h4 class="genre"><i>{style}</i></h4>
                         </div>
                       </div>
                     </a>
