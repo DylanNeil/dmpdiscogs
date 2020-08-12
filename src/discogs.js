@@ -119,11 +119,11 @@ render() {
   return (
     <React.Fragment>
       <button onClick = {this.folderAll}>All</button>
-      <button onClick = {this.folderIndie}><i class="fas fa-glasses"></i></button>
-      <button onClick = {this.folderChristmas}><i class="fas fa-candy-cane"></i></button>
-      <button onClick = {this.folderClassicRock}><i class="fas fa-guitar"></i></button>
+      <button onClick = {this.folderIndie}>Indie <i class="fas fa-glasses"></i></button>
+      <button onClick = {this.folderChristmas}>Christmas <i class="fas fa-candy-cane"></i></button>
+      <button onClick = {this.folderClassicRock}>Classic Rock</button>
+      <button onClick = {this.folderCountry}>Country <i class="fas fa-hat-cowboy-side"></i></button>
       <button onClick = {this.folderClassical}>Classical</button>
-      <button onClick = {this.folderCountry}><i class="fas fa-hat-cowboy-side"></i></button>
       <button onClick = {this.folderJazz}>Jazz</button>
       <button onClick = {this.folderSoul}>Soul/R&B</button>
       <button onClick = {this.folderMoog}>Moog</button>

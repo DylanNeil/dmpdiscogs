@@ -12,6 +12,21 @@
   padding:2em 1em;
 }
 
+button{
+  background-color: #fff;
+  color:#333;
+  border: 1px #333 solid;
+  padding:5px;
+  margin:4px;
+  border-radius:4px;
+}
+
+button:hover{
+  background-color: #333;
+  color:#fff;
+  border:none;
+  transform: scale(1.15);
+}
 
 h1, h2, h3, h4, h5, h6, p{
   text-align: left;
