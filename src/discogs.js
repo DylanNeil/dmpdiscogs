@@ -52,11 +52,6 @@ folderSoul = () => {
   this.getRecords);
 }
 
-folderKitsch = () => {
-  this.setState({folder: 2180877},
-  this.getRecords);
-}
-
 folderMoog = () => {
   this.setState({folder: 2180870},
   this.getRecords);
@@ -123,19 +118,18 @@ render() {
   const { isLoading, records } = this.state;
   return (
     <React.Fragment>
-    <button onClick = {this.folderAll}>All</button>
-    <button onClick = {this.folderIndie}><i class="fas fa-glasses"></i></button>
-    <button onClick = {this.folderChristmas}><i class="fas fa-candy-cane"></i></button>
-    <button onClick = {this.folderClassicRock}><i class="fas fa-guitar"></i></button>
-    <button onClick = {this.folderClassical}>Classical</button>
-    <button onClick = {this.folderCountry}><i class="fas fa-hat-cowboy-side"></i></button>
-    <button onClick = {this.folderJazz}>Jazz</button>
-    <button onClick = {this.folderSoul}>Soul/R&B</button>
-    <button onClick = {this.folderKitsch}>Kitsch</button>
-    <button onClick = {this.folderMoog}>Moog</button>
-    <button onClick = {this.folderPop}>Pop</button>
-    <button onClick = {this.folderSoundtrack}>Soundtrack</button>
-    <button onClick = {this.folderWeird}>Weird</button>
+      <button onClick = {this.folderAll}>All</button>
+      <button onClick = {this.folderIndie}><i class="fas fa-glasses"></i></button>
+      <button onClick = {this.folderChristmas}><i class="fas fa-candy-cane"></i></button>
+      <button onClick = {this.folderClassicRock}><i class="fas fa-guitar"></i></button>
+      <button onClick = {this.folderClassical}>Classical</button>
+      <button onClick = {this.folderCountry}><i class="fas fa-hat-cowboy-side"></i></button>
+      <button onClick = {this.folderJazz}>Jazz</button>
+      <button onClick = {this.folderSoul}>Soul/R&B</button>
+      <button onClick = {this.folderMoog}>Moog</button>
+      <button onClick = {this.folderPop}>Pop</button>
+      <button onClick = {this.folderSoundtrack}>Soundtrack</button>
+      <button onClick = {this.folderWeird}>Weird</button>
 
       <Container>
         <Row>
