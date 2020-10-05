@@ -79,7 +79,6 @@ folderAll = () => {
 
 
   getRecords() {
-  // We're using axios instead of Fetch
   axios
     // The API we're requesting data from
     .get("https://api.discogs.com//users/dmpduo/collection/folders/" + this.state.folder + "/releases?per_page=25&token=zZNDlnijlMatqOjTvbJutCDSSgNvfqzunXTuBoLO")
